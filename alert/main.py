@@ -146,10 +146,10 @@ async def sent_tradingview_alert(
     
     data = await request.json()
     print(f"data is {data}")
-    channel_tme_id = ""
+    channel_tme_id = "-1001524700237"
     bot = Bot(TELEGRAM_BOT_TOKEN)
     char_list = []
-    for char in text:
+    """for char in text:
         if char in [
             '_', '*', '[', ']', '(', ')', '~', '`', '>', '#', '+', '-', '=',
             '|', '{', '}', '.', '!'
@@ -158,7 +158,7 @@ async def sent_tradingview_alert(
         else:
             char_list.append(char)
             
-        formatted_text = "".join(char_list)
+        formatted_text = "".join(char_list)"""
 
     print(f"posting message to {channel_tme_id}")
     await bot.sendMessage(chat_id=channel_tme_id,
