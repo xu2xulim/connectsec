@@ -1,0 +1,7 @@
+#app
+fastapi
+pydantic
+requests
+uvicorn
+
+python-telegram-bot
