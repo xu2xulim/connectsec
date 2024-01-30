@@ -6,7 +6,6 @@ from fastapi.responses import JSONResponse
 from telegram import Bot
 from pydantic import BaseModel
 
-from deta import Deta
 import os
 import base64
 import io
