@@ -78,6 +78,7 @@ async def sent_tg_alert(
             return JSONResponse(content={"result": "Unit name cannot be found"})
 
         print(from_email)
+        
         if from_email in lookup.keys():
             channel_tme_id = str(lookup[from_email])
         else:
