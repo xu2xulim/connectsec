@@ -12,7 +12,8 @@ import io
 import requests
 #import json
 
-TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+CS_TELEGRAM_BOT_TOKEN = os.getenv('CS_TELEGRAM_BOT_TOKEN')
+TV_TELEGRAM_BOT_TOKEN = os.getenv('TV_TELEGRAM_BOT_TOKEN')
 
 
 app = FastAPI(
@@ -107,11 +108,11 @@ async def sent_tg_alert(
             formatted_text = "".join(char_list)
 
             print("about to")
-            if TELEGRAM_BOT_TOKEN == None:
+            if CS_TELEGRAM_BOT_TOKEN == None:
                     print("TOKEN is None")
                     return JSONResponse(content={"message" : "Telegram Token on set"})
                 
-            bot = Bot(TELEGRAM_BOT_TOKEN)
+            bot = Bot(CS_TELEGRAM_BOT_TOKEN)
             print(f"posting message to {channel_tme_id}")
             await bot.sendMessage(chat_id=channel_tme_id,
                                           text=formatted_text,
@@ -141,14 +142,14 @@ async def sent_tg_alert(
 async def sent_tradingview_alert(
     request: Request
 ):
-    if TELEGRAM_BOT_TOKEN == None:
+    if TV_TELEGRAM_BOT_TOKEN == None:
         print("TOKEN is None")
         return JSONResponse(content={"message" : "Telegram Token on set"})
     
     data = await request.json()
     print(f"data is {data}")
-    channel_tme_id = "-1001524700237"
-    bot = Bot(TELEGRAM_BOT_TOKEN)
+    channel_tme_id = "-1002003512581"
+    bot = Bot(TV_TELEGRAM_BOT_TOKEN)
     char_list = []
     """for char in text:
         if char in [
