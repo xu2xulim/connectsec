@@ -58,7 +58,7 @@ async def sent_tg_alert(
     lookup = {
         "sssecurity@alarmlink.co": "-1002122690730",
         "nms_takanini@alarmlink.co": "-1001524700237",
-        "limhss@gmail.com": "-1001524700237",
+        "limhss@gmail.com": "-1002005888252",
         "acannon.za@gmail.com": "-1001524700237"
     }
 
