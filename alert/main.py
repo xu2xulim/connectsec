@@ -54,7 +54,7 @@ async def sent_tg_alert(
         from_email = payload.headers['from'].split("<")[1].split(">")[0]
     else:
         from_email = payload.headers['from']  #take from headers instead
-
+    #update for 3 month demo for Anthony
     lookup = {
         "NMS_TAK_OG@alarmlink.co": "-1001524700237",
         "NMS_TAK_OG@alarmlink.co": "-1001524700237",
