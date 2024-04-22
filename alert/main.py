@@ -107,13 +107,12 @@ async def sent_tg_alert(
             
             formatted_text = "".join(char_list)
 
-            print("about to sent to {CS_TELEGRAM_BOT_TOKEN}")
+            print(f"about to sent to {CS_TELEGRAM_BOT_TOKEN}")
             if CS_TELEGRAM_BOT_TOKEN == None:
                     print("TOKEN is None")
                     return JSONResponse(content={"message" : "Telegram Token on set"})
                 
             bot = Bot(CS_TELEGRAM_BOT_TOKEN)
-            print(f"posting message to {channel_tme_id}")
             print(f"posting message to {channel_tme_id}")
             await bot.sendMessage(chat_id=channel_tme_id,
                                           text=formatted_text,
