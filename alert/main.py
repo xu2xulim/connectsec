@@ -56,10 +56,10 @@ async def sent_tg_alert(
         from_email = payload.headers['from']  #take from headers instead
     #update for 3 month demo for Anthony
     lookup = {
-        "NMS_TAK_OG@alarmlink.co": "-1001524700237",
-        "NMS_TAK_OG@alarmlink.co": "-1001524700237",
-        "limhss@gmail.com": "-1001524700237",
-        "afro360@gmail.com": "-1001524700237"
+        "NMS_TAK_OG@alarmlink.co": "-1002017366129",
+        "NMS_TAK_OG@alarmlink.co": "-1002017366129",
+        "limhss@gmail.com": "-1002017366129",
+        "afro360@gmail.com": "-1002017366129"
     }
 
     try:
