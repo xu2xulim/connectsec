@@ -92,7 +92,7 @@ async def sent_tg_alert(
 
         print(f"Up Next unit {unit_name} at {alert_time}")
         for attach in attachments:
-            print("inside")
+            print("attachment found")
             char_list = []
             text = f"An alert has been detected, please standby to receive the image captured for unit {unit_name} at {alert_time}"
 
@@ -107,7 +107,7 @@ async def sent_tg_alert(
             
             formatted_text = "".join(char_list)
 
-            print(f"about to sent to {CS_TELEGRAM_BOT_TOKEN}")
+            print("about to sent to bot")
             if CS_TELEGRAM_BOT_TOKEN == None:
                     print("TOKEN is None")
                     return JSONResponse(content={"message" : "Telegram Token on set"})
