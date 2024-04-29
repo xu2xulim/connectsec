@@ -115,19 +115,19 @@ async def sent_tg_alert(
                     return JSONResponse(content={"message" : "Telegram Token on set"})
                 
             bot = Bot(CS_TELEGRAM_BOT_TOKEN)
-            print(f"posting message to {channel_tme_id}")
+            print(f"posting message to {channel_tme_id} for {unit_name} at {alert_time}")
             await bot.sendMessage(chat_id=channel_tme_id,
                                           text=formatted_text,
                                           parse_mode='MarkdownV2')
-            print(f"posting message to {channel_tme_id} SUCCESSFUL")
+            print(f"posting message to {channel_tme_id} for {unit_name} at {alert_time} SUCCESSFUL")
 
 
-            print(f"posting image to {channel_tme_id}")
+            print(f"posting image to {channel_tme_id} for {unit_name} at {alert_time}")
             await bot.sendPhoto(chat_id=channel_tme_id,
                                     photo=io.BytesIO(base64.b64decode(
                                         attach['content'])),
                                         caption=f"{unit_name} at {alert_time}")
-            print(f"posting image to {channel_tme_id} SUCCESSFUL")
+            print(f"posting image to {channel_tme_id} for {unit_name} at {alert_time} SUCCESSFUL")
             
             break  # assumes 1 image per email
 
