@@ -58,6 +58,8 @@ async def sent_tg_alert(
     lookup = {
         "NMS_TAK_OG@alarmlink.co": "-1002017366129",
         "NMS_TAK_MG@alarmlink.co": "-1002017366129",
+        "NMS_TAK_IB@alarmlink.co": "-1002017366129",
+        "NMS_TAK_TG@alarmlink.co": "-1002017366129",
         "limhss@gmail.com": "-1002017366129",
         "afro360@gmail.com": "-1002017366129"
     }
